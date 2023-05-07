@@ -38,6 +38,7 @@ module.exports = {
     'tailwindcss',
   ],
   rules: {
+    '@next/next/no-img-element': 'off',
     '@typescript-eslint/ban-types': [
       'error',
       {

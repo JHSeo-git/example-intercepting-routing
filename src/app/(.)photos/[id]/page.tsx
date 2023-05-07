@@ -19,7 +19,7 @@ function ModalPhotoPage({ params }: PageProps) {
 
   return (
     <Modal>
-      <Photo photo={photo?.photo} />
+      <Photo id={photo?.id} photo={photo?.photo} modal />
     </Modal>
   );
 }

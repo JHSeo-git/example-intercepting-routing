@@ -16,7 +16,7 @@ type PageProps = {
 function PhotoPage({ params }: PageProps) {
   const photo = photos.find((photo) => photo.id === params.id);
 
-  return <Photo photo={photo?.photo} />;
+  return <Photo id={photo?.id} photo={photo?.photo} />;
 }
 
 export default PhotoPage;

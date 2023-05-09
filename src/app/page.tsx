@@ -8,11 +8,14 @@ export default function HomePage() {
     <ul className="flex flex-col items-center gap-4 md:flex-row">
       {photos.map((photo) => (
         <li key={photo.id} className="h-[180px] w-full md:h-[380px] md:flex-1">
-          <Link className="relative block h-full w-full" href={`/photos/${photo.id}`}>
+          <Link
+            className="relative block h-full w-full overflow-hidden"
+            href={`/photos/${photo.id}`}
+          >
             <Image
               src={photo.photo}
-              alt={`one of example photos`}
-              className="h-full w-full object-cover"
+              alt="one of example photos"
+              className="h-full w-full object-cover transition-all hover:scale-110"
               fill
             />
           </Link>

@@ -16,22 +16,22 @@ export function Photo({ id, photo, modal = false }: PhotoProps) {
 
   return (
     <div className="relative aspect-video w-full">
-      <Image src={photo} alt={`one of example photos`} className="object-contain" fill />
+      <Image src={photo} alt="one of example photos" className="object-contain" fill />
       {modal && (
-        <>
+        <div className="fixed right-4 top-4 z-10 flex flex-col space-y-4">
           <Link
             href=".."
-            className="absolute right-4 top-10 flex items-center justify-center rounded-full bg-slate-50/80 p-2 text-slate-700"
+            className="flex items-center justify-center rounded-full p-2 text-slate-700 transition-all hover:bg-slate-200"
           >
             <X className="h-5 w-5" />
           </Link>
           <a
             href={`/photos/${id}`}
-            className="absolute bottom-10 right-4 flex items-center justify-center rounded-full bg-slate-50/80 p-2 text-slate-700"
+            className="flex items-center justify-center rounded-full p-2 text-slate-700 transition-all hover:bg-slate-200"
           >
             <CornerRightUp className="h-5 w-5" />
           </a>
-        </>
+        </div>
       )}
     </div>
   );

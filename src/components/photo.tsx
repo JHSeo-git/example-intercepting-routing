@@ -16,7 +16,7 @@ export function Photo({ id, photo, modal = false }: PhotoProps) {
 
   return (
     <div className="relative aspect-video w-full">
-      <Image src={photo} alt="one of example photos" className="object-contain" fill />
+      <Image src={photo} alt="one of example photos" className="object-cover" fill />
       {modal && (
         <div className="fixed right-4 top-4 z-10 flex flex-col space-y-4">
           <Link
